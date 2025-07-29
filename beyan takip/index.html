@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beyan Takip Sistemi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Beyan Takip Sistemi</h1>
+    <form id="kayit-form">
+      <input type="text" name="plaka" placeholder="Plaka" required />
+      <input type="text" name="firma" placeholder="Firma" required />
+      <input type="tel" name="cep" placeholder="Cep No" required />
+      <input type="number" name="fiyat" placeholder="Fiyat" required />
+      <input type="text" name="beyan" placeholder="Beyan No" required />
+      <select name="odeme" required>
+        <option value="">Ödeme Durumu</option>
+        <option value="Ödedi">Ödedi</option>
+        <option value="Ödemedi">Ödemedi</option>
+      </select>
+      <button type="submit">Kaydet</button>
+    </form>
+
+    <div class="butonlar">
+      <button onclick="pdfIndir()">PDF Olarak İndir</button>
+    </div>
+
+    <table id="kayit-tablosu">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Plaka</th>
+          <th>Firma</th>
+          <th>Cep No</th>
+          <th>Fiyat</th>
+          <th>Beyan No</th>
+          <th>Ödeme</th>
+          <th>İşlem</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
